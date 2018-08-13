@@ -4,6 +4,7 @@ const deck = require('./deck/deck.service.js');
 const block = require('./block/block.service.js');
 const cardBlock = require('./card-block/card-block.service.js');
 const cardDeck = require('./card-deck/card-deck.service.js');
+const cardType = require('./card-type/card-type.service.js');
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(cardDb);
@@ -12,4 +13,5 @@ module.exports = function (app) {
   app.configure(block);
   app.configure(cardBlock);
   app.configure(cardDeck);
+  app.configure(cardType);
 };
