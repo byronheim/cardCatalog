@@ -62,8 +62,18 @@ module.exports = function (app) {
     },
     available: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
+    cardType: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'SORCERY',
+      field: 'card_type',
+      references: {
+        model: 'cardType',
+        key: 'id',
+      }    
+    }
   }, {
     timestamps: false,
     hooks: {
